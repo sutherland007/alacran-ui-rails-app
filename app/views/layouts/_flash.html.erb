@@ -1,0 +1,38 @@
+<script>
+<% flash.each do |type, message| %>
+	var altype = '<%= alerter(type) %>'
+	var altitle = "notify"
+	var aicon = "<span class='icn-bubble'></span>"
+	var notype = "notify"
+
+	if (altype === 'success' || altype === 'notice'){
+		altitle = "<%= t(:sucss) %>"
+		aicon = "<span class='icn-checkmark'></span>"
+		notype = 'success'
+	}
+	else if (altype === 'alert'){
+		altitle = "<%= t(:alertr) %>"
+		aicon = "<span class='icn-warning'></span>"
+		notype = 'alert'
+	}
+	else if (altype === 'warning'){
+		altitle = "<%= t(:warnr) %>"
+		aicon = "<span class='icn-warning'></span>"
+		notype = 'warning'
+	}
+	else if (altype === 'info'){
+		altitle = "<%= t(:infor) %>"
+		aicon = "<span class='icn-bubble'></span>"
+		notype = 'info'
+	}
+
+  $.Notify({
+    		caption: altitle,
+    		content: '<%= message %>',
+    		keepOpen: true,
+    		icon: aicon,
+    		type: notype
+		});
+<% end %>
+
+</script>
