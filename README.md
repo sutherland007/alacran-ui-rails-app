@@ -1,24 +1,8 @@
-# README
+# Alacrán UI oficial rails app for demo and showcase.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+This a front end css framework forked on Metro UI CSS V3
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The live version [is here](https://alacran-ui.herokuapp.com/) is still under cronstruction.
+the rails app will implement and show all the components of this framework so you can
+see them in action and how the perform in a real webapp.
