@@ -32,9 +32,23 @@
 en:
   hello: "Hello world"
   frame_index: "Alacrán UI"
+  frame_desc: "The front-end framework for developing beautiful projects."
   base_css: "Base CSS"
   data: "Forms & Data"
   visuals: "Visuals"
+  menus: "Menus"
+  information: "Information"
+  controls: "Controls"
+  datetime: "Date & time"
+  media: "Media"
+  thirdparty: "Third party"
+  utils: "Utils"
+  community: "Community"
+  docs: "The Docs"
+  download: "Download"
+  github: "GitHub"
+  quick_settings: "Quick settings"
+  dark_mode_en: "Dark mode"
   #main CSS
   grid_system: "Grid system"
   typography: "Typography"
@@ -54,5 +68,61 @@ en:
   draggable: "Draggable"
   events: "Events"
   hotkeys: "Hotkeys"
-  #Visuals
-  
+  #visuals
+  charms: "Charms"
+  tiles: "Tiles"
+  carousel: "Carousel"
+  panels: "Panels"
+  rating: "Rating"
+  preloaders: "Preloaders"
+  images: "Images"
+  streamer: "Streamer"
+  presenter: "Presenter"
+  #menus
+  appbar: "Appbar"
+  regmenus: "Regular menus"
+  fluentmenus: "Fluent menus"
+  sidebar: "Sidebar"
+  #information
+  notify: "Notify"
+  dialogs: "Dialogs"
+  windows: "Windows"
+  pops: "Pops"
+  hints: "Hitns"
+  #controls
+  accordion: "Accordion"
+  tabs: "Tabs"
+  treeview: "Treeview"
+  listview: "Listview"
+  slider: "Slider"
+  wizards: "Wizards"
+  #date & time
+  calendar: "Calendar"
+  datepicker: "Datepicker"
+  countdown: "Countdown"
+  #media
+  audio_player: "Audio Player"
+  video_player: "Video Player"
+  #Third party
+  select2: "Select2"
+  data_tables: "Jquery dataTables"
+  animate: "Animate CSS"
+  #Utils
+  dark_mode: "Dark mode"
+  easing: "Easing"
+  reqjs: "Require JS"
+  #Sections
+  browsers: "Browser support"
+  about_sec_title: "This is how this project started"
+  get_st_title: "Get started!"
+  #large texts
+  para_home_1: "In 2017 I (AJ Spektor) was developing various projects using Metro UI CSS V3, and it was freakin' good for everything but... it has its own drawbacks internally so I decided to modify some functions of the framework according to my needs"
+  para_home_2: "In January of 2018 I finally decided to create my own fork of Metro UI CSS V3 adding features which I consider necessary... why alacrán? Because I live in Durango, Mexico the land of alacrans"
+  cta_about: "Read more!"
+  #started steps
+  step_1: "Download the framework!"
+  step_2: "Import the files into your project"
+  step_3: "Enjoy Alacrán UI"
+  step_q: "Whats next?"
+  step_q_2: "check the docs!"
+  step_warn: "Don't forget to add this in your header!"

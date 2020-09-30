@@ -1,2 +1,90 @@
 <%= render 'bar' %>
 <%= title t(:frame_index) %>
+<div id="sec1" style="text-align: center;">
+            <div id="Sec1Content" class="fg-white">
+                <h1 style="font-size: 4.5rem; line-height: 1" class="text-shadow alacran-title text-light"><%= t(:frame_index) %></h1>
+                <div class="padding30 sub-leader text-light">
+                    <%= t(:frame_desc) %>
+                </div>
+                <div style="text-align: center;">
+                	<a href="https://github.com/sutherland007/Alacran-UI/releases/download/build-9052020/Alacran.UI.Build.9052020.rar" class="button large-button primary" style="padding-top: 0;"><%= t(:download) %></a>
+                	<a href="https://github.com/sutherland007/Alacran-CSS" class="button large-button success" style="padding-top: 0;"><%= t(:github) %></a>
+                </div>
+            </div>
+</div>
+
+<div style="text-align: center;">
+            <h1 style="text-align: center;"><%= t(:browsers) %></h1>
+            <div class="grid">
+                <div class="row cells4">
+                    <div class="cell">
+                        <p><span class="icn-firefox icn-4x"></span> FireFox</p>
+                    </div>
+
+                    <div class="cell">
+                        <p><span class="icn-edge icn-4x"></span> Microsoft Edge</p>
+                    </div>
+
+                    <div class="cell">
+                        <p><span class="icn-opera icn-4x"></span> Opera</p>
+                    </div>
+
+                    <div class="cell">
+                        <p><span class="icn-chrome icn-4x"></span> Google Chrome</p>
+                    </div>
+                </div>
+            </div>
+</div>
+
+<div style="background-color: #674AD4; color: #FFF;">
+	<h2 style="text-align: center; padding-top: 20px;"><%= t(:about_sec_title) %></h2>
+	<div class="flex-grid">
+		<div class="row cell-auto-size flex-just-center">
+			<div class="cell colspan2"><%= image_tag("changes.png", size: "256x256") %></div>
+
+			<div class="cell colspan5">
+				<h4><%= t(:para_home_1) %></h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="flex-grid">
+		<div class="row cell-auto-size flex-just-center">
+			<div class="cell colspan5">
+				<h4><%= t(:para_home_2) %></h4>
+			</div>
+
+			<div class="cell colspan2">
+				<%= image_tag("alr-ui-logo.png", size: "200x200") %>
+			</div>
+		</div>
+	</div>
+
+	<div style="text-align: center; padding-bottom: 20px;">
+		<a href="/about" class="button large-button success" style="padding-top: 0;"><%= t(:cta_about) %></a>			
+	</div>
+	
+</div>
+
+<div>
+	<h2 style="text-align: center"><%= t(:get_st_title) %></h2>
+	<ul class="step-list">
+		<li>
+			<h4><%= t(:step_1) %></h4>
+		</li>
+		<li>
+			<h4><%= t(:step_2) %></h4>
+		</li>
+		<li>
+			<h4><%= t(:step_3) %></h4>
+		</li>
+		<li>
+			<h4><%= t(:step_q) %> <a onclick="toggleMetroCharm('#docs-charm')" style="cursor: pointer;"><%= t(:step_q_2) %></a></h4>
+		</li>
+		<li>
+			<h4><%= t(:step_warn) %></h4>
+		</li>
+	</ul>
+</div>
+<div>
+</div>

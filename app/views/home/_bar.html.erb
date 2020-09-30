@@ -3,8 +3,40 @@
 
         <ul class="app-bar-menu">
             <li>
-                <a href="#" class="dropdown-toggle"><%= t(:base_css) %></a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                <a href="#">Build 9052020</a>
+            </li>
+        </ul>
+        <ul class="app-bar-menu place-right" style="margin-right: 10px;">
+            <div class="input-control text" style="float: left;">
+                <span class="icn-search prepend-icon"></span>
+                <input type="text">
+            </div>
+            <li>
+                <a onclick="toggleMetroCharm('#docs-charm')"><span class="icn-menu icn-2x"></span></a>
+            </li>
+        </ul>
+
+        <span class="app-bar-pull"></span>
+
+</div>
+<div data-role="charm" data-position="right" id="docs-charm" class="charm right-side" style="opacity: 1; display: block; right: 0px; left: auto; top: 0px; bottom: 0px; overflow-y: scroll;">
+    <ul class="sidebar2">
+        <li class="title"><%= t(:docs) %></li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-multitrack-audio icon"></span><%= t(:quick_settings) %></a>
+                <ul class="d-menu" data-role="dropdown" style="display: none;">
+                    <li><a id="homeDarkMode"><span id="homeDarkMode-icn" class="icn-eye_blind"></span> <%= t(:dark_mode_en) %></a></li>
+                    <% if I18n.locale == I18n.default_locale %>
+                        <li><%= link_to  :locale =>'es'  do %><span class="icn-chevron-right"></span> Español<% end %></li>
+                        
+                    <% else %>
+                        <li><%= link_to  :locale =>'en'  do %><span class="icn-chevron-right"></span> English<% end %></li>
+                    <% end %>
+                </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-earth_2 icon"></span><%= t(:base_css) %></a>
+                <ul class="d-menu" data-role="dropdown" style="display: none;">
                     <li><a href="<%= grid_system_path %>"><%= t(:grid_system) %></a></li>
                     <li><a href="<%= typography_path %>"><%= t(:typography) %></a></li>
                     <li><a href="<%= icons_path %>"><%= t(:icons) %></a></li>
@@ -12,11 +44,11 @@
                     <li><a href="<%= helpers_path %>"><%= t(:helpers) %></a></li>
                     <li><a href="<%= rtl_path %>"><%= t(:rtl) %></a></li>
                 </ul>
-            </li>
-            <li>
-                <a href="#" class="dropdown-toggle"><%= t(:data) %></a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li><a href="<%= tables_path %>"><%= t(:tables) %></a></li>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-widgets icon"></span><%= t(:data) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="<%= tables_path %>"><%= t(:tables) %></a></li>
                     <li><a href="<%= forms_path %>"><%= t(:forms) %></a></li>
                     <li><a href="<%= buttons_path %>"><%= t(:buttons) %></a></li>
                     <li><a href="<%= donut_chart_path %>"><%= t(:donut_chart) %></a></li>
@@ -28,43 +60,121 @@
                     <li><a href="<%= draggable_path %>"><%= t(:draggable) %></a></li>
                     <li><a href="<%= events_path %>"><%= t(:events) %></a></li>
                     <li><a href="<%= hotkeys_path %>"><%= t(:hotkeys) %></a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="dropdown-toggle"><%= t(:visuals) %></a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li><a href="<%= grid_system_path %>"><%= t(:grid_system) %></a></li>
-                    <li><a href="<%= typography_path %>"><%= t(:typography) %></a></li>
-                    <li><a href="<%= icons_path %>"><%= t(:icons) %></a></li>
-                    <li><a href="<%= colors_path %>"><%= t(:colors) %></a></li>
-                    <li><a href="<%= helpers_path %>"><%= t(:helpers) %></a></li>
-                    <li><a href="<%= rtl_path %>"><%= t(:rtl) %></a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="dropdown-toggle">Community</a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li><a href="https://www.facebook.com/ajspektor/">Facebook</a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-palette icon"></span><%= t(:visuals) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="<%= charms_path %>"><%= t(:charms) %></a></li>
+                <li><a href="<%= tiles_path %>"><%= t(:tiles) %></a></li>
+                <li><a href="<%= carousel_path %>"><%= t(:carousel) %></a></li>
+                <li><a href="<%= panels_path %>"><%= t(:panels) %></a></li>
+                <li><a href="<%= rating_path %>"><%= t(:rating) %></a></li>
+                <li><a href="<%= preloaders_path %>"><%= t(:preloaders) %></a></li>
+                <li><a href="<%= images_path %>"><%= t(:images) %></a></li>
+                <li><a href="<%= streamer_path %>"><%= t(:streamer) %></a></li>
+                <li><a href="<%= presenter_path %>"><%= t(:presenter) %></a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-list_2 icon"></span><%= t(:menus) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="<%= appbar_path %>"><%= t(:appbar) %></a></li>
+                <li><a href="<%= regmenus_path %>"><%= t(:regmenus) %></a></li>
+                <li><a href="<%= fluentmenus_path %>"><%= t(:fluentmenus) %></a></li>
+                <li><a href="<%= sidebar_path %>"><%= t(:sidebar) %></a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-notification icon"></span><%= t(:information) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="<%= notify_path %>"><%= t(:notify) %></a></li>
+                <li><a href="<%= dialogs_path %>"><%= t(:dialogs) %></a></li>
+                <li><a href="<%= windows_path %>"><%= t(:windows) %></a></li>
+                <li><a href="<%= pops_path %>"><%= t(:pops) %></a></li>
+                <li><a href="<%= hints_path %>"><%= t(:hints) %></a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-target icon"></span><%= t(:controls) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="<%= accordion_path %>"><%= t(:accordion) %></a></li>
+                <li><a href="<%= tabs_path %>"><%= t(:tabs) %></a></li>
+                <li><a href="<%= treeview_path %>"><%= t(:treeview) %></a></li>
+                <li><a href="<%= listview_path %>"><%= t(:listview) %></a></li>
+                <li><a href="<%= slider_path %>"><%= t(:slider) %></a></li>
+                <li><a href="<%= wizards_path %>"><%= t(:wizards) %></a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-calendar icon"></span><%= t(:datetime) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="<%= calendar_path %>"><%= t(:calendar) %></a></li>
+                <li><a href="<%= datepicker_path %>"><%= t(:datepicker) %></a></li>
+                <li><a href="<%= countdown_path %>"><%= t(:countdown) %></a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-file-play icon"></span><%= t(:media) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="<%= audio_player_path %>"><%= t(:audio_player) %></a></li>
+                <li><a href="<%= video_player_path %>"><%= t(:video_player) %></a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-plus icon"></span><%= t(:thirdparty) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="<%= select2_path %>"><%= t(:select2) %></a></li>
+                <li><a href="<%= data_tables_path %>"><%= t(:data_tables) %></a></li>
+                <li><a href="<%= animate_path %>"><%= t(:animate) %></a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-cog icon"></span><%= t(:utils) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="<%= dark_mode_path %>"><%= t(:dark_mode) %></a></li>
+                <li><a href="<%= easing_path %>"><%= t(:easing) %></a></li>
+                <li><a href="<%= reqjs_path %>"><%= t(:reqjs) %></a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle" href="#"><span class="icn-users icon"></span><%= t(:community) %></a>
+            <ul class="d-menu" data-role="dropdown" style="display: none;">
+                <li><a href="https://www.facebook.com/ajspektor/">Facebook</a></li>
                     <li><a href="https://github.com/sutherland007/Alacran-CSS">Github</a></li>
                     <li class="divider"></li>
                     <li><a href="license.html">License</a></li>
-                </ul>
-            </li>
-            <li>
-                <a id="homeDarkMode"><span id="homeDarkMode-icn" class="icn-eye_blind icn-2x"></span></a>
-            </li>
-        </ul>
-        <ul class="app-bar-menu place-right" style="margin-right: 10px;">
-            <div class="input-control text">
-                <span class="icn-search prepend-icon"></span>
-                <input type="text">
-            </div>
-        </ul>
-
-        <span class="app-bar-pull"></span>
-
+            </ul>
+        </li>
+    </ul>
 </div>
-<div class="build-string">
+
+<!--<div class="build-string">
     <p>Alacrán UI</p>
     <p>Build 9052020</p>
-</div>
+</div>-->
+<style type="text/css">
+    .sidebar2{
+        background: transparent;
+        border: none;
+    }
+    .d-menu{
+        background: transparent;
+    }
+    .sidebar2 li.active a{
+        background-color: #3c3c3c;
+    }
+    .sidebar2 li:hover a{
+        background-color: #808080;
+    }
+    .sidebar2 li a{
+        background: transparent;
+        color: #ffffff;
+    }
+    .sidebar2 li li:not(:hover) a{
+        background: transparent;
+    }
+    .sidebar2 li:hover{
+        background: transparent;
+    }
+</style>
