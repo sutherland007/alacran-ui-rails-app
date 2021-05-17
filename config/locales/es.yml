@@ -1,7 +1,8 @@
 es:
   hello: ""
-  frame_index: "Alacrán UI"
-  frame_desc: "El framework de font-end para desarrollar proyectos hermosos."
+  site_title: "Alacrán UI"
+  frame_index: "Construye y diseña tu sitio con Alacrán UI"
+  frame_desc: "El framework front-end modular simple y fácil de usar."
   base_css: "CSS Base"
   data: "Formularios y datos"
   visuals: "Elementos visuales"
@@ -95,3 +96,5 @@ es:
   step_q: "¿Y ahora qué sigue?"
   step_q_2: "¡checa la documentación!"
   step_warn: "¡No olvides de incluir esto en tu header!"
+  #ALR Admin
+  admin_home: "Panel de Admin"

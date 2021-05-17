@@ -30,9 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  site_title: "Alacrán UI"
   hello: "Hello world"
-  frame_index: "Alacrán UI"
-  frame_desc: "The front-end framework for developing beautiful projects."
+  frame_index: "Build and design your site with Alacrán UI"
+  frame_desc: "Simple and easy to use modular front end framework."
   base_css: "Base CSS"
   data: "Forms & Data"
   visuals: "Visuals"
@@ -126,3 +127,5 @@ en:
   step_q: "Whats next?"
   step_q_2: "check the docs!"
   step_warn: "Don't forget to add this in your header!"
+  #ALR admin
+  admin_home: "Admin panel home"

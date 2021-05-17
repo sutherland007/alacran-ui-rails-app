@@ -11,12 +11,13 @@ Rails.application.routes.draw do
   match '/blog', to: 'blog/blog#index', :locale => /es|en/, via: [:get]
   match '/(:locale)/blog', to: 'blog/blog#index', :locale => /es|en/, via: [:get]
 
-  match '/admin', to: 'admin/admin#index', :locale => /es|en/, via: [:get]
-  match '/(:locale)/admin', to: 'admin/admin#index', :locale => /es|en/, via: [:get]
+  match '/admin', to: 'alr_admin/home#index', :locale => /es|en/, via: [:get]
+  match '/(:locale)/admin', to: 'alr_admin/home#index', :locale => /es|en/, via: [:get]
   
   scope "(:locale)", :locale => /es|en/ do
     #namspace for staff-admins.
     namespace :alr_admin do
+        get 'admin', to: 'alr_admin/home#index'
     end
 
     #namespace for blog

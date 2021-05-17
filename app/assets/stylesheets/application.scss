@@ -94,6 +94,17 @@
     left: 90%;
     z-index: 1000;
 }
+.step-circle{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;    
+}
+.step-number{
+    font-size: 50px;
+    top: 20%;
+    position: relative;
+}
 @media screen and (max-width: 800px) {
     .app-bar.fixed-top {
         position: relative !important;
